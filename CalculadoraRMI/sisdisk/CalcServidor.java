@@ -1,4 +1,4 @@
- package sisdist;
+ package sisdisk;
 import java.net.InetAddress;
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
@@ -10,15 +10,13 @@ import java.rmi.registry.Registry;
  * @author aluno
  */
 public class CalcServidor {
-    int port = 10000;
-    String Address;
-    Registry reg;
     
     public CalcServidor() {
      try {
        ICalculadora c = new CalcMain();
-       reg = LocateRegistry.createRegistry(port);
-       reg.rebind("rmiCalculatorService", c);//rmi://localhost:1020/
+  	LocateRegistry.createRegistry(1099);
+       Naming.rebind("rmiCalculatorService",c);
+       System.err.println("Running");
      } catch (Exception e) {
        System.out.println("Trouble: " + e);
      }

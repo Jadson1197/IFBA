@@ -1,4 +1,4 @@
-package sisdist;
+package sisdisk;
 
 /**
  *
@@ -19,22 +19,22 @@ public class CalcMain
         super(); 
     } 
  
-    public long add(long a, long b) 
+    public int add(int a, int b) 
         throws java.rmi.RemoteException { 
         return a + b; 
     } 
  
-    public long sub(long a, long b) 
+    public int sub(int a, int b) 
         throws java.rmi.RemoteException { 
         return a - b; 
     } 
  
-    public long mul(long a, long b) 
+    public int mul(int a, int b) 
         throws java.rmi.RemoteException { 
         return a * b; 
     } 
  
-    public long div(long a, long b) 
+    public int div(int a, int b) 
         throws java.rmi.RemoteException { 
         return a / b; 
     } 
